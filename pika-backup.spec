@@ -1,3 +1,5 @@
+# workaround empty debug
+%define _empty_manifest_terminate_build 0
 Name:           pika-backup
 Version:        0.5.2
 Release:        1
