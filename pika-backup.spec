@@ -1,28 +1,24 @@
-%global rustflags '-Clink-arg=-Wl,-z,relro,-z,now'
 Name:           pika-backup
-Version:        0.4.2
-Release:        0
+Version:        0.5.2
+Release:        1
 Summary:        Simple backups based on borg
 License:        GPL-3.0-or-later
 URL:            https://gitlab.gnome.org/World/pika-backup
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://gitlab.gnome.org/World/pika-backup/-/archive/v%{version}/pika-backup-v%{version}.tar.bz2
 Source1:        vendor.tar.xz
 Source2:        cargo_config
-Patch0:         disable-update-desktop-database-and-gtk-update-icon-cache.patch
+
 BuildRequires:  meson
 BuildRequires:  pkgconfig
 BuildRequires:  rust-packaging
-BuildRequires:  update-desktop-files
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  pkgconfig(libadwaita-1)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  itstool
-Requires:       borgbackup
-Requires:       python3-msgpack
-
-%lang_package
+Recommends:     borgbackup
+Requires:       python3dist(msgpack)
 
 %description
 Doing backups the easy way. Plugin your USB drive and let the Pika do the rest for you.
@@ -41,7 +37,7 @@ cp %{SOURCE2} .cargo/config
 %meson_install
 %find_lang %{name}
 
-%files
+%files -f %{name}.lang
 %license LICENSE
 %doc README.md
 %{_bindir}/pika-backup
@@ -52,4 +48,3 @@ cp %{SOURCE2} .cargo/config
 %{_datadir}/metainfo/*.metainfo.xml
 %{_datadir}/dbus-1/services/*.service
 
-%files lang -f %{name}.lang
