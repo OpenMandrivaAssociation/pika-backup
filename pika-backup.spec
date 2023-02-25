@@ -24,10 +24,10 @@ Requires:       python3dist(msgpack)
 Doing backups the easy way. Plugin your USB drive and let the Pika do the rest for you.
 
 %prep
-%setup -qa1
+%autosetup -n %{name}-v%{version} -a1 -p1
 mkdir .cargo
 cp %{SOURCE2} .cargo/config
-%autopatch -p1
+
 
 %build
 %meson
