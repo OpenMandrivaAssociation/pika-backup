@@ -43,6 +43,7 @@ cp %{SOURCE2} .cargo/config
 %files -f %{name}.lang
 %license LICENSE
 %doc README.md
+%doc %{_datadir}/help/*
 %{_bindir}/pika-backup
 %{_bindir}/pika-backup-monitor
 %config %{_sysconfdir}/xdg/autostart/org.gnome.World.PikaBackup.Monitor.desktop
