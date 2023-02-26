@@ -20,7 +20,7 @@ BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  pkgconfig(libadwaita-1)
 BuildRequires:  pkgconfig(libsecret-1)
 BuildRequires:  itstool
-Recommends:     borgbackup
+Requires:       borgbackup
 Requires:       python3dist(msgpack)
 
 %description
