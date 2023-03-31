@@ -2,7 +2,7 @@
 %define _empty_manifest_terminate_build 0
 Name:           pika-backup
 Version:        0.5.2
-Release:        1
+Release:        2
 Summary:        Simple backups based on borg
 License:        GPL-3.0-or-later
 URL:            https://gitlab.gnome.org/World/pika-backup
