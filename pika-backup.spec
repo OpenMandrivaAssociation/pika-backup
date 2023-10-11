@@ -1,15 +1,14 @@
 # workaround empty debug
 %define _empty_manifest_terminate_build 0
 Name:           pika-backup
-Version:        0.6.1
-Release:        2
+Version:        0.6.2
+Release:        1
 Summary:        Simple backups based on borg
 License:        GPL-3.0-or-later
 URL:            https://gitlab.gnome.org/World/pika-backup
 Source0:        https://gitlab.gnome.org/World/pika-backup/-/archive/v%{version}/pika-backup-v%{version}.tar.bz2
 Source1:        vendor.tar.xz
 Source2:        cargo_config
-Patch0:		fix-pkgconfig.patch
 
 BuildRequires:  meson
 BuildRequires:  git
