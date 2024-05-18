@@ -11,6 +11,7 @@ Source1:        vendor.tar.xz
 Source2:        cargo_config
 
 BuildRequires:  meson
+BuildRequires:  gettext
 BuildRequires:  git
 BuildRequires:  pkgconfig
 BuildRequires:  rust-packaging
